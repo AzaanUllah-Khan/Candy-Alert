@@ -1,0 +1,334 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", serif;
+}
+
+::-webkit-scrollbar {
+    background-color: #f2f4f6;
+    width: 4px;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: #8e8e8e;
+    border-radius: 20px;
+}
+
+button {
+    cursor: pointer;
+}
+
+body {
+    background-color: #f2f4f6;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    padding: 30px 0;
+    overflow-x: hidden;
+}
+
+.containera {
+    display: flex;
+    align-items: start;
+    justify-content: center;
+    width: 60%;
+}
+
+.main {
+    font-size: 30px;
+    font-weight: bolder;
+    width: 100%;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.normal {
+    border-right: 3px solid #f2f4f6;
+}
+
+.containera div {
+    background-color: rgba(0, 0, 0, 0.02);
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    width: 60%;
+}
+
+.containera div h2 {
+    font-size: 16px;
+    font-weight: normal;
+    padding-bottom: 5px;
+    border-bottom: 1px solid #eee;
+    margin-bottom: 10px;
+}
+
+.containera .normal button {
+    background-color: #ffffff;
+    color: rgb(0, 60, 255);
+    font-size: 14px;
+    padding: 7px 10px;
+    width: 100%;
+    outline: none;
+    border: none;
+    position: relative;
+    overflow: hidden;
+}
+
+.containera .candy button {
+    background-color: #7066e0;
+    color: white;
+    font-size: 14px;
+    padding: 7px 10px;
+    width: 100%;
+    outline: none;
+    border: none;
+    position: relative;
+    overflow: hidden;
+}
+
+.containera .candy button::after {
+    content: "";
+    background-color: rgba(255, 255, 255, 0.09);
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    left: -105%;
+    top: 0;
+    transform: skew(-35deg);
+    transition: all .3s linear;
+}
+
+.containera .candy button:hover::after {
+    left: 0;
+    top: 0;
+    transform: skew(0);
+}
+
+.containera div div.msg {
+    width: 100%;
+    margin-top: 10px;
+    text-align: left;
+    align-items: start;
+}
+
+.green {
+    color: green;
+    padding-left: 10px;
+}
+
+.box {
+    width: 60%;
+    padding: 10px 10px 0;
+    background-color: rgba(0, 0, 0, 0.02);
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.box input {
+    width: 100%;
+    padding: 10px;
+    background-color: rgba(255, 255, 255, 0.2);
+    border-radius: 10px;
+    outline: none;
+    border: 1px solid #eee;
+    margin-bottom: 10px;
+    color: rgb(8, 55, 164);
+    font-weight: bolder;
+}
+
+.box h1 {
+    font-size: 20px;
+    font-weight: bold;
+    width: 100%;
+    text-align: left;
+    margin-bottom: 10px;
+}
+
+.accordion-item {
+    background-color: rgba(0, 0, 0, 0.03);
+}
+
+.accordion-button {
+    background-color: rgba(0, 0, 0, 0.02);
+}
+
+a {
+    text-decoration: none;
+    color: #fff;
+}
+
+ul li {
+    list-style: none;
+    color: #fff;
+}
+
+body div.footer {
+    z-index: -1;
+    --footer-background: rgb(255, 0, 0);
+    display: grid;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    min-height: 12rem;
+    width: 100%;
+    opacity: .05;
+}
+
+.footer .bubbles {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 1rem;
+    background: var(--footer-background);
+    filter: url("#blob");
+}
+
+.footer .bubbles .bubble {
+    position: absolute;
+    left: var(--position, 60%);
+    background: var(--footer-background);
+    border-radius: 100%;
+    -webkit-animation: bubble-size var(--time, 4s) ease-in infinite var(--delay, 0s), bubble-move var(--time, 4s) ease-in infinite var(--delay, 0s);
+    animation: bubble-size var(--time, 4s) ease-in infinite var(--delay, 0s), bubble-move var(--time, 4s) ease-in infinite var(--delay, 0s);
+    transform: translate(-60%, 100%);
+}
+
+.footer .content {
+    padding: 6rem 1rem 2rem;
+    background: var(--footer-background);
+    z-index: 2;
+}
+
+.footer .content .container {
+    width: 100%;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 1.5rem;
+    color: #fff;
+}
+
+.content h2 {
+    margin-bottom: .25rem;
+    font-size: 2.25rem;
+}
+
+.content span {
+    font-size: .875rem;
+}
+
+.aaa input {
+    width: 100%;
+    padding: 10px;
+    background-color: rgba(255, 255, 255, 0.2);
+    border-radius: 10px;
+    outline: none;
+    border: 1px solid #eee;
+    margin-bottom: 10px;
+}
+
+@-webkit-keyframes bubble-size {
+
+    0%,
+    75% {
+        width: var(--size, 4rem);
+        height: var(--size, 4rem);
+    }
+
+    100% {
+        width: 0rem;
+        height: 0rem;
+    }
+}
+
+@keyframes bubble-size {
+
+    0%,
+    75% {
+        width: var(--size, 4rem);
+        height: var(--size, 4rem);
+    }
+
+    100% {
+        width: 0rem;
+        height: 0rem;
+    }
+}
+
+@-webkit-keyframes bubble-move {
+    0% {
+        bottom: -4rem;
+    }
+
+    100% {
+        bottom: var(--distance, 10rem);
+    }
+}
+
+@keyframes bubble-move {
+    0% {
+        bottom: -4rem;
+    }
+
+    100% {
+        bottom: var(--distance, 10rem);
+    }
+}
+
+@media screen and (max-width: 767px) {
+    .footer .content {
+        padding: 0 1.5rem;
+    }
+
+    .footer .content .container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .content h2 {
+        font-size: 1.5rem;
+    }
+
+    .content span {
+        font-size: .813rem;
+    }
+
+    .footer__links {
+        flex-direction: column;
+        row-gap: 1.5rem;
+    }
+
+    .footer__socials {
+        justify-self: flex-start;
+    }
+}
+
+@media screen and (max-width: 967px) {
+
+    .containera,
+    .box,
+    .aaa {
+        width: 80% !important;
+    }
+}
+
+@media screen and (max-width: 567px) {
+    .footer .content .container {
+        grid-template-columns: repeat(1, 1fr);
+        row-gap: 3.5rem;
+    }
+
+    .containera,
+    .box,
+    .aaa {
+        width: 90% !important;
+    }
+}
